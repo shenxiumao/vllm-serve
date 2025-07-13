@@ -10,17 +10,6 @@
 - 完整的日志记录和监控
 - 简单易用的启停脚本
 
-## 已部署模型
-
-当前系统已配置以下模型：
-
-| 模型名称 | 端口 | 模型路径 | GPU分配 | 内存利用率 |
-|---------|-----|---------|---------|----------|
-| **DeepSeek-R1-0528-Qwen3-14B** | 8000 | /root/data/model/zjydiary/DeepSeek-R1-0528-Qwen3-14B | GPU0 (CPU线程 0-15) | 0.32 |
-| **Qwen3-14B** | 8001 | /root/data/model/Qwen/Qwen3-14B | GPU1 (CPU线程 16-31) | 0.32 |
-| **DeepSeek-R1-Distill-Qwen-7B** | 8002 | /root/data/model/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B | GPU2 (CPU线程 48-63) | 0.16 |
-| **Qwen2.5-7B-Instruct** | 8003 | /root/data/model/Qwen/Qwen2.5-7B-Instruct | GPU3 (CPU线程 64-79) | 0.16 |
-
 ## 快速开始
 
 ### 安装依赖
