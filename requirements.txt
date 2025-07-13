@@ -1,0 +1,13 @@
+# VLLM API服务器依赖
+fastapi>=0.95.0
+uvicorn>=0.22.0
+httpx>=0.24.0
+pydantic>=2.0.0
+python-multipart>=0.0.6
+python-dotenv>=1.0.0
+asyncio>=3.4.3
+typing-extensions>=4.5.0
+starlette>=0.27.0
+json5>=0.9.14
+logging>=0.4.9.6
+pytz>=2023.3
