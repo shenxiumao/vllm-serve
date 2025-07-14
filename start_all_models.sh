@@ -36,7 +36,7 @@ echo "===== 启动所有VLLM模型服务 ====="
 
 # 启动模型1: DeepSeek-R1-0528-Qwen3-14B
 echo "正在启动 DeepSeek-R1-0528-Qwen3-14B 模型服务..."
-CUDA_VISIBLE_DEVICES=0,1,2,3 vllm serve /root/data/model/zjydiary/DeepSeek-R1-0528-Qwen3-14B \
+numactl --physcpubind=0-15,16-31,48-63,64-79 vllm serve /root/data/model/zjydiary/DeepSeek-R1-0528-Qwen3-14B \
     --served-model-name DeepSeek-R1-0528-Qwen3-14B \
     --tensor-parallel-size 4 \
     --max-model-len 32768 \
@@ -52,7 +52,7 @@ sleep 15
 
 # 启动模型2: Qwen3-14B
 echo "正在启动 Qwen3-14B 模型服务..."
-CUDA_VISIBLE_DEVICES=0,1,2,3 vllm serve /root/data/model/Qwen/Qwen3-14B \
+numactl --physcpubind=0-15,16-31,48-63,64-79 vllm serve /root/data/model/Qwen/Qwen3-14B \
     --served-model-name Qwen3-14B \
     --tensor-parallel-size 4 \
     --max-model-len 32768 \
@@ -68,7 +68,7 @@ sleep 15
 
 # 启动模型3: DeepSeek-R1-Distill-Qwen-7B
 echo "正在启动 DeepSeek-R1-Distill-Qwen-7B 模型服务..."
-CUDA_VISIBLE_DEVICES=0,1,2,3 vllm serve /root/data/model/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B \
+numactl --physcpubind=0-15,16-31,48-63,64-79 vllm serve /root/data/model/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B \
     --served-model-name DeepSeek-R1-Distill-Qwen-7B \
     --tensor-parallel-size 4 \
     --max-model-len 32768 \
@@ -84,7 +84,7 @@ sleep 15
 
 # 启动模型4: Qwen2.5-7B-Instruct
 echo "正在启动 Qwen2.5-7B-Instruct 模型服务..."
-CUDA_VISIBLE_DEVICES=0,1,2,3 vllm serve /root/data/model/Qwen/Qwen2.5-7B-Instruct \
+numactl --physcpubind=0-15,16-31,48-63,64-79 vllm serve /root/data/model/Qwen/Qwen2.5-7B-Instruct \
     --served-model-name Qwen2.5-7B-Instruct \
     --tensor-parallel-size 4 \
     --max-model-len 32768 \
